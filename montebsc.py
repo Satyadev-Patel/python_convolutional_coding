@@ -6,7 +6,7 @@ ans=[0]*17
 for q in range(0,17):
     k=500
     cnt=0
-    for u in range(0,100):
+    for u in range(0,20000):
         x=[None]*k
         for i in range(0,k):
             x[i]=random.choice([0,1])
@@ -156,7 +156,7 @@ for q in range(0,17):
             if code[i]!=decoded[i]:
                 count=count+1
         cnt=cnt+count
-    print(cnt)
-    ans[q]=cnt/(100*k)
-print(ans)
+    print("SNR:{}  Error Bits:{}".format(snr[q],cnt))
+    ans[q]=cnt/(20000*k)
+print("BER:{}".format(ans))
 print("!")
